@@ -1,0 +1,1168 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Sem Baijens</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/portfolio.css" />
+    <script src="portfolio.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-wrapper">
+        <a href="#top" class="logo">Sem<span>.</span></a>
+        <button
+          class="menu-toggle"
+          aria-label="Menu openen"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+        <nav class="main-nav">
+          <a href="#about">Introductie</a>
+          <a href="#cv">CV</a>
+          <a href="#logboek">Logboek</a>
+          <a href="#ontwikkeling">Ontwikkeling</a>
+          <a href="#projects">Projecten</a>
+          <a href="#reflectie">Reflectie</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero section reveal">
+        <div class="hero-content">
+          <p class="eyebrow">Portfolio · 1PROe</p>
+          <h1>Welkom bij mijn portfolio</h1>
+          <p>
+            Ik ben Sem Baijens, een beginnende programmeur met interesse in C#,
+            HTML, webontwikkeling en probleemoplossend denken.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">Bekijk projecten</a>
+            <a href="#contact" class="btn btn-outline">Neem contact op</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="code-window">
+            <div class="window-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <pre><code>const student = {
+  naam: "Sem Baijens",
+  focus: "Programmeren",
+  skills: ["C#", "HTML", "CSS", "JavaScript"]
+};</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Over mij</p>
+          <h2>Introductie</h2>
+        </div>
+        <div class="glass-card">
+          <p>
+            Ik ben Sem Baijens, een beginnende programmeur die graag nieuwe
+            dingen leert. Ik werk graag met talen zoals C# en HTML en denk
+            oplossingsgericht. Wat mij motiveert, is het bouwen van dingen die
+            echt werken en mensen kunnen helpen. Ik leer elke dag bij en vind
+            het leuk om samen met anderen projecten te doen. Mijn droom is om
+            later te werken aan uitdagende ICT Projecten.
+          </p>
+        </div>
+      </section>
+
+      <section id="cv" class="section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Mijn gegevens</p>
+          <h2>Curriculum vitae</h2>
+        </div>
+        <div class="cta-card">
+          <p>
+            Bekijk mijn digitale CV met vaardigheden, ervaring en achtergrond.
+          </p>
+          <a target="_blank" href="cv/cv.html" class="btn btn-primary"
+            >Ga naar Curriculum vitae</a
+          >
+        </div>
+      </section>
+
+      <section id="logboek" class="section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Planning</p>
+          <h2>Logboek</h2>
+        </div>
+        <div class="accordion">
+          <button class="accordion-header" type="button">
+            Toon / verberg logboek <span>+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Lesweek</th>
+                    <th>Inhoud</th>
+                    <th>Deadline</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Week 1</td>
+                    <td>Introductie WP1, Scratch, uitleg PE1</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Week 2</td>
+                    <td>Git, GitHub, POP intro, motivatie en kernwaarden</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Week 3</td>
+                    <td>Reflecteren, autonomie, versiebeheer met Git</td>
+                    <td>PE1</td>
+                  </tr>
+                  <tr>
+                    <td>Week 4</td>
+                    <td>LOB-test, personal branding, plannen en organiseren</td>
+                    <td>PE2 / PE3</td>
+                  </tr>
+                  <tr>
+                    <td>Week 5</td>
+                    <td>Portfolio, gastcollege, carrièrekompas</td>
+                    <td>PE4 / PE5</td>
+                  </tr>
+                  <tr>
+                    <td>Week 6</td>
+                    <td>Projectanalyse, Git merge, C# project sprint 1</td>
+                    <td>PE5</td>
+                  </tr>
+                  <tr>
+                    <td>Week 8</td>
+                    <td>C# documentatie en debugging</td>
+                    <td>C# sprint 1</td>
+                  </tr>
+                  <tr>
+                    <td>Week 10</td>
+                    <td>C# debugging en sprint 3</td>
+                    <td>C# sprint 2</td>
+                  </tr>
+                  <tr>
+                    <td>Week 14</td>
+                    <td>Aflevering portfolio</td>
+                    <td>PE12</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="ontwikkeling" class="section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Groei</p>
+          <h2>Ontwikkeling</h2>
+        </div>
+        <div class="accordion-list">
+          <div class="accordion">
+            <button class="accordion-header" type="button">
+              Waarom kies ik voor programmeren? <span>+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Als 19-jarige ben ik altijd gefascineerd geweest door
+                technologie en hoe deze ons dagelijks leven beïnvloedt.
+                Programmeren biedt mij de mogelijkheid om creatieve oplossingen
+                te bedenken en ideeën tot leven te brengen. Ik wil leren hoe ik
+                software en applicaties kan bouwen die impact hebben, van
+                eenvoudige tools tot complexe systemen. Het uitdagende proces
+                van probleemoplossing in programmeren geeft me voldoening en
+                motiveert me om constant te blijven leren. Daarnaast is de vraag
+                naar programmeurs in de huidige digitale wereld enorm, wat
+                betekent dat ik met deze vaardigheden een solide basis leg voor
+                een veelbelovende carrière. Het idee om deel uit te maken van
+                een snel evoluerende sector en mezelf continu te ontwikkelen
+                spreekt me enorm aan.
+              </p>
+            </div>
+          </div>
+          <div class="accordion">
+            <button class="accordion-header" type="button">
+              Waarom past programmeren bij mij? <span>+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Ik denk dat programmeren perfect bij mij past omdat het mijn
+                nieuwsgierigheid en probleemoplossend vermogen stimuleert. Ik
+                hou ervan om complexe problemen op te lossen en creatieve
+                oplossingen te vinden. De mogelijkheid om iets tastbaars te
+                bouwen, zoals een applicatie of website, geeft me veel
+                voldoening. Programmeren sluit ook goed aan bij mijn interesse
+                in technologie en innovatie, omdat het altijd in beweging is en
+                veel kansen biedt voor groei en ontwikkeling. Daarnaast heb ik
+                een analytische manier van denken, wat belangrijk is bij het
+                schrijven van efficiënte en goed functionerende code. Het idee
+                dat ik met mijn vaardigheden een verschil kan maken, zoals het
+                ontwikkelen van tools die het leven van anderen verbeteren,
+                motiveert me. De combinatie van creativiteit, logica en de vraag
+                naar programmeurs in de huidige markt geeft me het vertrouwen
+                dat ik in dit beroep niet alleen mijn passie kan volgen, maar
+                ook een stabiele toekomst kan opbouwen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="profiel" class="section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Profiel</p>
+          <h2>Situering binnen het Profiel</h2>
+        </div>
+
+        <div class="accordion-list">
+          <div class="accordion">
+            <button class="accordion-header" type="button">
+              🎨 Rol: Ontwerper <span>+</span>
+            </button>
+            <div class="accordion-content">
+              <h3>Waar sta je momenteel?</h3>
+              <p>
+                Ik ben in staat om een softwareproject conceptueel voor te
+                bereiden en mijn ideeën duidelijk op papier te zetten.
+              </p>
+
+              <h3>Wat lukt je al goed?</h3>
+              <ul>
+                <li>Het analyseren van vereisten.</li>
+                <li>Basisontwerpen maken.</li>
+              </ul>
+
+              <h3>Wat lukt je nog niet?</h3>
+              <p>Volledig zelfstandig technische ontwerpen maken.</p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <button class="accordion-header" type="button">
+              💻 Rol: Programmeur <span>+</span>
+            </button>
+            <div class="accordion-content">
+              <h3>Waar sta je momenteel?</h3>
+              <p>Ik ben vertrouwd met softwareapplicaties en programmeren.</p>
+
+              <h3>Wat lukt je al goed?</h3>
+              <ul>
+                <li>Onderhoudbare code schrijven.</li>
+                <li>Unit tests uitvoeren.</li>
+              </ul>
+
+              <h3>Wat lukt je nog niet?</h3>
+              <p>Complexe datastructuren in nieuwe talen.</p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <button class="accordion-header" type="button">
+              🧪 Rol: Tester <span>+</span>
+            </button>
+            <div class="accordion-content">
+              <h3>Waar sta je momenteel?</h3>
+              <p>Ik begrijp de basisprincipes van testen.</p>
+
+              <h3>Wat lukt je al goed?</h3>
+              <ul>
+                <li>Kleine functionaliteiten testen.</li>
+                <li>Bugs documenteren.</li>
+              </ul>
+
+              <h3>Wat lukt je nog niet?</h3>
+              <p>Grote testscenario’s ontwerpen.</p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <button class="accordion-header" type="button">
+              🤝 Teamspeler <span>+</span>
+            </button>
+            <div class="accordion-content">
+              <h3>Waar sta je momenteel?</h3>
+              <p>Ik werk graag samen en communiceer goed.</p>
+
+              <h3>Wat lukt je al goed?</h3>
+              <ul>
+                <li>Overleggen met teamleden.</li>
+                <li>Duidelijk communiceren.</li>
+              </ul>
+
+              <h3>Wat lukt je nog niet?</h3>
+              <p>Technische uitleg geven aan niet-technische mensen.</p>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <button class="accordion-header" type="button">
+              🚀 Levenslang Lerend <span>+</span>
+            </button>
+            <div class="accordion-content">
+              <h3>Waar sta je momenteel?</h3>
+              <p>Ik leer actief bij via cursussen en projecten.</p>
+
+              <h3>Wat lukt je al goed?</h3>
+              <ul>
+                <li>Nieuwe concepten leren.</li>
+                <li>Kennis toepassen in projecten.</li>
+              </ul>
+
+              <h3>Wat lukt je nog niet?</h3>
+              <p>Alle trends tegelijk opvolgen.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Projecten</p>
+          <h2>Werkplekleren</h2>
+        </div>
+
+        <!-- ========================= -->
+        <!-- WERKPLEKLEREN 1 -->
+        <!-- ========================= -->
+
+        <div class="wpl-block">
+          <div class="wpl-title">
+            <div>
+              <h3>Werkplekleren 1</h3>
+              <p>Basisontwikkeling, webtechnologie en programmeerlogica</p>
+            </div>
+          </div>
+
+          <div class="accordion-list">
+            <!-- WORDLE 1 -->
+            <div class="accordion">
+              <button class="accordion-header" type="button">
+                🎮 Wordle 1 <span>+</span>
+              </button>
+
+              <div class="accordion-content">
+                <article class="project-card">
+                  <img
+                    src="assets/photo/wordl1.png"
+                    alt="Screenshot Wordle 1"
+                  />
+
+                  <div>
+                    <h3>Wordle 1</h3>
+
+                    <p>
+                      Eerste kennismaking met programmeerlogica en validatie. Ik
+                      bouwde een eenvoudige Wordle-game waarbij de gebruiker
+                      woorden moest raden binnen een beperkt aantal pogingen.
+                    </p>
+
+                    <ul>
+                      <li>Werken met arrays en loops</li>
+                      <li>Inputvalidatie</li>
+                      <li>Basis debugging</li>
+                      <li>Logica voor lettercontrole</li>
+                    </ul>
+
+                    <a
+                      href="https://github.com/PXL-WPL1-2425/c-project-wordle-1-SemBaijensPXL"
+                      target="_blank"
+                      class="btn btn-outline"
+                    >
+                      Bekijk GitHub
+                    </a>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- WORDLE 2 -->
+            <div class="accordion">
+              <button class="accordion-header" type="button">
+                🎮 Wordle 2 <span>+</span>
+              </button>
+
+              <div class="accordion-content">
+                <article class="project-card">
+                  <img
+                    src="assets/photo/wordl2.png"
+                    alt="Screenshot Wordle 2"
+                  />
+
+                  <div>
+                    <h3>Wordle 2</h3>
+
+                    <p>
+                      Uitbreiding van de eerste versie met een grafische
+                      interface, moeilijkheidsgraden en verbeterde structuur.
+                    </p>
+
+                    <ul>
+                      <li>GUI ontwerpen</li>
+                      <li>Code modulair structureren</li>
+                      <li>Gebruiksvriendelijkheid verbeteren</li>
+                      <li>Complexere spelmechanieken</li>
+                    </ul>
+
+                    <a
+                      href="https://github.com/PXL-WPL1-2425/wordle-2-SemBaijensPXL"
+                      target="_blank"
+                      class="btn btn-outline"
+                    >
+                      Bekijk GitHub
+                    </a>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- WORDLE 3 -->
+            <div class="accordion">
+              <button class="accordion-header" type="button">
+                🎮 Wordle 3 <span>+</span>
+              </button>
+
+              <div class="accordion-content">
+                <article class="project-card">
+                  <img
+                    src="assets/photo/wordl3.png"
+                    alt="Screenshot Wordle 3"
+                  />
+
+                  <div>
+                    <h3>Wordle 3</h3>
+
+                    <p>
+                      Verdere uitbreiding richting multiplayerfunctionaliteit,
+                      scoreborden en interactieve communicatie tussen spelers.
+                    </p>
+
+                    <ul>
+                      <li>Realtime scorebord</li>
+                      <li>Synchronisatieproblemen oplossen</li>
+                      <li>Complexere logica implementeren</li>
+                      <li>Debugging verbeteren</li>
+                    </ul>
+
+                    <a
+                      href="https://github.com/PXL-WPL1-2425/wordle-3-SemBaijensPXL"
+                      target="_blank"
+                      class="btn btn-outline"
+                    >
+                      Bekijk GitHub
+                    </a>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- CV PROJECT -->
+            <div class="accordion">
+              <button class="accordion-header" type="button">
+                💼 Digitaal Curriculum Vitae <span>+</span>
+              </button>
+
+              <div class="accordion-content">
+                <div class="featured-project">
+                  <div class="carousel">
+                    <div class="carousel-inner">
+                      <img
+                        src="assets/photo/cv1.png"
+                        alt="CV screenshot 1"
+                        class="carousel-item"
+                      />
+                      <img
+                        src="assets/photo/cv2.png"
+                        alt="CV screenshot 2"
+                        class="carousel-item"
+                      />
+                      <img
+                        src="assets/photo/cv3.png"
+                        alt="CV screenshot 3"
+                        class="carousel-item"
+                      />
+                    </div>
+
+                    <button class="carousel-button prev" type="button">
+                      ‹
+                    </button>
+                    <button class="carousel-button next" type="button">
+                      ›
+                    </button>
+                  </div>
+
+                  <div>
+                    <p class="eyebrow">Webproject</p>
+
+                    <h3>Digitaal Curriculum Vitae</h3>
+
+                    <p>
+                      Een professionele en responsieve CV-website gebouwd met
+                      HTML, CSS en JavaScript. Hierbij lag de focus op
+                      gebruiksvriendelijkheid, responsive design en interactieve
+                      componenten.
+                    </p>
+
+                    <ul>
+                      <li>Responsive design</li>
+                      <li>Flexbox & CSS Grid</li>
+                      <li>Dropdownmenu’s en accordions</li>
+                      <li>JavaScript interacties</li>
+                      <li>Professionele UI verbeteren</li>
+                    </ul>
+
+                    <a
+                      href="https://github.com/SemBaijensPXL/webproject"
+                      target="_blank"
+                      class="btn btn-outline"
+                    >
+                      Bekijk GitHub
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========================= -->
+        <!-- WERKPLEKLEREN 2 -->
+        <!-- ========================= -->
+
+        <br />
+        <br />
+        <div class="wpl-block">
+          <div class="wpl-title">
+            <div>
+              <h3>Werkplekleren 2</h3>
+              <p>
+                Full-stack development, architectuur en professionele
+                softwareontwikkeling
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-list">
+            <div class="accordion">
+              <button class="accordion-header" type="button">
+                🚀 Webshop & beheersysteem <span>+</span>
+              </button>
+
+              <div class="accordion-content">
+                <div class="featured-project large-project">
+                  <div class="project-content">
+                    <div class="tech-stack">
+                      <span>.NET</span>
+                      <span>Vue.js</span>
+                      <span>C#</span>
+                      <span>Dapper</span>
+                      <span>SQL Server</span>
+                      <span>JWT</span>
+                      <span>REST API</span>
+                    </div>
+
+                    <br />
+
+                    <h3>Webshop & beheersysteem</h3>
+
+                    <div class="project-section">
+                      <h4>📘 Beschrijving van je case</h4>
+
+                      <p>
+                        Binnen dit project werkte ik aan een uitgebreid
+                        software- en ontwikkeltraject waarin zowel back-end,
+                        front-end als gebruiksvriendelijkheid centraal stonden.
+                        De focus lag op het ontwikkelen en verbeteren van
+                        verschillende applicatieonderdelen, voornamelijk binnen
+                        een webshop- en beheersysteem in .NET en Vue.js.
+                      </p>
+
+                      <p>
+                        Tijdens het project kwamen meerdere technische thema’s
+                        aan bod, zoals authenticatie met JWT-tokens, beveiligde
+                        API-koppelingen, wachtwoordherstel via e-mail,
+                        databasebeheer met SQL Server en Dapper, en het opzetten
+                        van een duidelijke softwarearchitectuur.
+                      </p>
+
+                      <p>
+                        Daarnaast werkte ik aan verschillende
+                        gebruikersinterfaces en functionaliteiten, zoals
+                        productbeheer, winkelwagenlogica, checkoutflows,
+                        contactformulieren en dashboards. Hierbij stond niet
+                        alleen de technische werking centraal, maar ook de
+                        professionele uitstraling en gebruikservaring van de
+                        applicatie.
+                      </p>
+
+                      <p>
+                        Er werd veel aandacht besteed aan responsive design,
+                        consistente styling en het verbeteren van de interactie
+                        tussen gebruiker en systeem.
+                      </p>
+
+                      <p>
+                        Naast de technische ontwikkeling hield ik me ook bezig
+                        met debugging en probleemoplossing. Regelmatig kwamen
+                        fouten naar voren rond authenticatie, API-verbindingen,
+                        SMTP-mailverzending, databasequeries of front-end
+                        logica.
+                      </p>
+
+                      <p>
+                        Door deze problemen stap voor stap te analyseren en op
+                        te lossen, groeide mijn inzicht in softwareontwikkeling
+                        en systeemintegratie.
+                      </p>
+
+                      <p>
+                        Het project bestond dus niet uit één enkele opdracht,
+                        maar uit een combinatie van technische ontwikkeling,
+                        optimalisatie en gebruiksvriendelijke
+                        softwareoplossingen. Hierdoor kreeg ik een beter inzicht
+                        in hoe verschillende onderdelen binnen een moderne
+                        applicatie samenwerken en welke keuzes belangrijk zijn
+                        om een stabiele, veilige en onderhoudbare applicatie te
+                        bouwen.
+                      </p>
+                    </div>
+
+                    <div class="project-section">
+                      <h4>👨‍💻 Jouw aandeel hierin</h4>
+
+                      <p>
+                        Binnen dit project lag mijn grootste
+                        verantwoordelijkheid bij het ontwikkelen, verbeteren en
+                        structureren van de applicatie. Ik werkte actief mee aan
+                        zowel de front-end als de back-end en dacht mee over
+                        technische oplossingen, architectuur en
+                        gebruiksvriendelijkheid.
+                      </p>
+
+                      <p>
+                        Ik hield me bezig met het bouwen van API-endpoints in C#
+                        .NET, het verwerken van data met Dapper en SQL Server,
+                        en het koppelen van deze functionaliteiten aan een
+                        Vue.js front-end.
+                      </p>
+
+                      <p>
+                        Ik ontwikkelde en verbeterde verschillende onderdelen
+                        zoals authenticatie met JWT, gebruikersbeheer,
+                        profielpagina’s, winkelwagenfunctionaliteiten,
+                        orderverwerking en contactformulieren.
+                      </p>
+
+                      <p>
+                        Daarbij onderzocht ik ook hoe beveiliging en validatie
+                        correct toegepast konden worden, bijvoorbeeld bij
+                        loginfunctionaliteiten, rolbeheer en wachtwoordherstel.
+                      </p>
+
+                      <p>
+                        Wanneer problemen ontstonden, analyseerde ik
+                        foutmeldingen en testte ik verschillende oplossingen om
+                        de applicatie stabiel te laten functioneren.
+                      </p>
+
+                      <p>
+                        Aan de front-end werkte ik aan de opmaak en
+                        gebruikerservaring van meerdere pagina’s. Ik verbeterde
+                        componenten zoals accordions, dropdownmenu’s, dashboards
+                        en productpagina’s zodat deze professioneler,
+                        duidelijker en gebruiksvriendelijker werden.
+                      </p>
+
+                      <p>
+                        Daarbij hield ik rekening met structuur, responsive
+                        design en consistente styling.
+                      </p>
+
+                      <p>
+                        Daarnaast nam ik initiatief in het zoeken naar
+                        verbeteringen en optimalisaties. Ik stelde vragen,
+                        testte alternatieve oplossingen en werkte stap voor stap
+                        aan een beter eindresultaat.
+                      </p>
+
+                      <p>
+                        Door deze actieve rol ontwikkelde ik niet alleen mijn
+                        technische vaardigheden, maar leerde ik ook beter
+                        nadenken over softwarearchitectuur, debugging,
+                        samenwerking tussen systemen en de impact van
+                        gebruiksvriendelijke software op de eindgebruiker.
+                      </p>
+                    </div>
+
+                    <div class="project-highlights">
+                      <div class="highlight-card">
+                        <h4>🔐 Authenticatie</h4>
+                        <p>
+                          JWT login, rollenbeheer en beveiligde API-endpoints.
+                        </p>
+                      </div>
+
+                      <div class="highlight-card">
+                        <h4>🛒 Webshop</h4>
+                        <p>
+                          Winkelwagen, checkout, orderverwerking en
+                          productbeheer.
+                        </p>
+                      </div>
+
+                      <div class="highlight-card">
+                        <h4>🎨 Front-end</h4>
+                        <p>
+                          Responsive design, dashboards en professionele UI.
+                        </p>
+                      </div>
+
+                      <div class="highlight-card">
+                        <h4>🛠 Debugging</h4>
+                        <p>Problemen analyseren en stap voor stap oplossen.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="reflectie" class="section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Terugblik</p>
+          <h2>Reflectie</h2>
+        </div>
+
+        <div class="accordion-list">
+          <!-- ========================= -->
+          <!-- WERKPLEKLEREN 1 -->
+          <!-- ========================= -->
+
+          <div class="wpl-block">
+            <div class="wpl-title">
+              <div>
+                <h3>Werkplekleren 1</h3>
+                <p>Basisontwikkeling, soft skills en programmeerervaring</p>
+              </div>
+            </div>
+
+            <div class="accordion-list">
+              <!-- WORDLE REFLECTIE -->
+              <div class="accordion">
+                <button class="accordion-header" type="button">
+                  🎮 Reflectie op de Wordle-projecten <span>+</span>
+                </button>
+
+                <div class="accordion-content">
+                  <h3>Goed</h3>
+
+                  <ul>
+                    <li>
+                      <strong>Evolutie van vaardigheden:</strong>
+                      Doorheen de drie Wordle-projecten groeiden mijn technische
+                      vaardigheden en probleemoplossend vermogen sterk.
+                    </li>
+
+                    <li>
+                      <strong>Creativiteit en uitbreidingen:</strong>
+                      Elk project bouwde verder op het vorige met nieuwe
+                      functies zoals moeilijkheidsgraden en multiplayer.
+                    </li>
+
+                    <li>
+                      <strong>Doorzettingsvermogen:</strong>
+                      Het oplossen van complexe problemen zoals
+                      multiplayer-synchronisatie vergde veel
+                      doorzettingsvermogen.
+                    </li>
+                  </ul>
+
+                  <h3>Minder goed</h3>
+
+                  <ul>
+                    <li>
+                      <strong>Code-organisatie:</strong>
+                      In eerdere versies was de code minder modulair opgebouwd.
+                    </li>
+
+                    <li>
+                      <strong>Testen en optimalisatie:</strong>
+                      Vooral bij Wordle 3 kon meer aandacht besteed worden aan
+                      testen en performantie.
+                    </li>
+                  </ul>
+
+                  <h3>Inzicht</h3>
+
+                  <ul>
+                    <li>
+                      <strong>Iteratief werken loont:</strong>
+                      Stapsgewijs ontwikkelen gaf inzicht in uitbreidbare
+                      softwarestructuren.
+                    </li>
+
+                    <li>
+                      <strong>Gebruiksvriendelijkheid:</strong>
+                      Een goede interface maakt een groot verschil in
+                      gebruikerservaring.
+                    </li>
+                  </ul>
+
+                  <h3>Waardering</h3>
+
+                  <ul>
+                    <li>
+                      <strong>Volharding:</strong>
+                      Elk project verbeterde mijn technische én persoonlijke
+                      vaardigheden.
+                    </li>
+
+                    <li>
+                      <strong>Persoonlijke groei:</strong>
+                      De projecten hielpen mij sterker worden in programmeren en
+                      creatief denken.
+                    </li>
+
+                    <li>
+                      <strong>Toekomstvisie:</strong>
+                      De opgedane kennis vormt een sterke basis voor toekomstige
+                      projecten.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- POP -->
+              <div class="accordion">
+                <button class="accordion-header" type="button">
+                  💡 Reflectie POP-sessie <span>+</span>
+                </button>
+
+                <div class="accordion-content">
+                  <h3>Wat heb ik bijgeleerd?</h3>
+
+                  <p>
+                    Tijdens deze sessie leerde ik hoe belangrijk personal
+                    branding is binnen een professionele omgeving.
+                  </p>
+
+                  <p>
+                    Het gaat niet alleen om technische vaardigheden, maar ook om
+                    communicatie, presentatie en uitstraling.
+                  </p>
+
+                  <h3>Hoe pas ik dit toe?</h3>
+
+                  <p>
+                    Ik kan deze inzichten toepassen door professioneel te
+                    communiceren, mijn online profiel te verbeteren en actief
+                    aan mijn soft skills te werken.
+                  </p>
+                </div>
+              </div>
+
+              <!-- X FACTOR -->
+              <div class="accordion">
+                <button class="accordion-header" type="button">
+                  🚀 Reflectie op de X-factor <span>+</span>
+                </button>
+
+                <div class="accordion-content">
+                  <h3>(Em)passie</h3>
+
+                  <p>
+                    Mijn passie ligt bij ontdekken, innoveren en mezelf
+                    voortdurend verbeteren.
+                  </p>
+
+                  <p>
+                    Ik wil groeien in empathisch luisteren en beter samenwerken
+                    met anderen.
+                  </p>
+
+                  <h3>Ondernemend & innovatief</h3>
+
+                  <p>
+                    Ik neem graag initiatief en wil sneller leren handelen en
+                    omgaan met uitdagingen.
+                  </p>
+
+                  <p>
+                    Creativiteit en innovatie helpen mij groeien als toekomstige
+                    professional.
+                  </p>
+
+                  <h3>(Internationaal) Samenwerken</h3>
+
+                  <p>
+                    Mijn netwerk bestaat uit vrienden, familie, collega’s en
+                    professionals die mij ondersteunen met feedback en advies.
+                  </p>
+
+                  <p>
+                    Ik wil groeien in communicatie, samenwerken en openstaan
+                    voor verschillende ideeën.
+                  </p>
+
+                  <h3>Grenzen verleggen</h3>
+
+                  <p>
+                    Samenwerking tussen verschillende disciplines is essentieel
+                    voor innovatie.
+                  </p>
+
+                  <h3>Multi- & disciplinariteit</h3>
+
+                  <p>
+                    Door praktijkervaring, stages en samenwerking met anderen
+                    ontwikkel ik zowel hard skills als soft skills.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ========================= -->
+          <!-- WERKPLEKLEREN 2 -->
+          <!-- ========================= -->
+
+          <div class="wpl-block">
+            <div class="wpl-title">
+              <div>
+                <h3>Werkplekleren 2</h3>
+                <p>
+                  Full-stack development, architectuur en professionele
+                  softwareontwikkeling
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-list">
+              <div class="accordion">
+                <button class="accordion-header" type="button">
+                  🚀 Reflectie Werkplekleren 2 <span>+</span>
+                </button>
+
+                <div class="accordion-content scrollable-content">
+                  <h3>Algemene reflectie</h3>
+
+                  <p>
+                    Tijdens Werkplekleren 2 werkte ik aan verschillende
+                    opdrachten en projecten binnen softwareontwikkeling, waarbij
+                    ik zowel technisch als persoonlijk sterk ben gegroeid.
+                  </p>
+
+                  <p>
+                    De voorbije periode stond vooral in het teken van het
+                    ontwikkelen en verbeteren van applicaties met technologieën
+                    zoals C# .NET, Vue.js, SQL Server en Dapper.
+                  </p>
+
+                  <p>
+                    Ik werkte aan verschillende onderdelen zoals
+                    API-koppelingen, authenticatie met JWT-tokens,
+                    databasebeheer, front-end ontwikkeling en
+                    gebruiksvriendelijke interfaces.
+                  </p>
+
+                  <p>
+                    Daarnaast hield ik mij bezig met debugging,
+                    probleemoplossing en het verbeteren van de algemene
+                    structuur en kwaliteit van de applicaties.
+                  </p>
+
+                  <p>
+                    Doorheen deze periode leerde ik niet alleen beter
+                    programmeren, maar kreeg ik ook meer inzicht in hoe
+                    verschillende systemen samenwerken binnen een professionele
+                    softwareomgeving.
+                  </p>
+
+                  <h3>Wat vond ik positief?</h3>
+
+                  <p>
+                    Een bijzonder positief element van Werkplekleren 2 vond ik
+                    de afwisseling tussen front-end en back-end ontwikkeling.
+                  </p>
+
+                  <p>
+                    Vooral het bouwen van nieuwe functionaliteiten en het stap
+                    voor stap oplossen van technische problemen gaf mij veel
+                    voldoening.
+                  </p>
+
+                  <p>
+                    Ik vond het interessant om te merken hoe een applicatie
+                    steeds verder groeide en professioneler werd door kleine
+                    verbeteringen aan code, structuur en design.
+                  </p>
+
+                  <p>
+                    Ook het werken aan gebruiksvriendelijke interfaces en
+                    moderne layouts vond ik erg leuk.
+                  </p>
+
+                  <p>
+                    Het gaf mij motivatie om niet alleen technisch correcte
+                    software te maken, maar ook applicaties die overzichtelijk
+                    en aangenaam zijn voor de gebruiker.
+                  </p>
+
+                  <h3>Wat verliep moeilijk?</h3>
+
+                  <p>Toch waren er ook momenten die minder vlot verliepen.</p>
+
+                  <p>
+                    Vooral problemen rond authenticatie, API-verbindingen,
+                    SMTP-mailverzending en databasefouten zorgden soms voor
+                    frustratie.
+                  </p>
+
+                  <p>
+                    Sommige bugs waren moeilijk terug te vinden en vroegen veel
+                    tijd en analysewerk.
+                  </p>
+
+                  <p>
+                    Ik merkte dat ik soms te lang zelfstandig bleef zoeken naar
+                    oplossingen, waardoor ik onnodig tijd verloor.
+                  </p>
+
+                  <p>
+                    Daarnaast was het soms uitdagend om het overzicht te bewaren
+                    wanneer meerdere onderdelen tegelijk aangepast moesten
+                    worden.
+                  </p>
+
+                  <p>
+                    Ondanks deze moeilijkheden heb ik geleerd om
+                    gestructureerder te werken, problemen stap voor stap te
+                    analyseren en gerichter oplossingen te zoeken.
+                  </p>
+
+                  <h3>Nieuwe inzichten</h3>
+
+                  <p>
+                    Tijdens Werkplekleren 2 heb ik veel nieuwe inzichten
+                    opgedaan.
+                  </p>
+
+                  <p>
+                    Ik heb geleerd dat softwareontwikkeling veel meer is dan
+                    enkel code schrijven.
+                  </p>
+
+                  <p>
+                    Een goede structuur, duidelijke communicatie tussen
+                    systemen, beveiliging en gebruiksvriendelijkheid zijn
+                    minstens even belangrijk.
+                  </p>
+
+                  <p>
+                    Ik kijk nu ook anders naar debugging en fouten oplossen.
+                  </p>
+
+                  <p>
+                    In plaats van snel iets te proberen, probeer ik eerst beter
+                    te analyseren waar het probleem precies ontstaat.
+                  </p>
+
+                  <p>
+                    Daarnaast heb ik geleerd hoe belangrijk het is om logisch en
+                    gestructureerd te werken binnen grotere projecten.
+                  </p>
+
+                  <p>
+                    Deze inzichten wil ik zeker meenemen naar toekomstige
+                    projecten.
+                  </p>
+
+                  <h3>Persoonlijke groei</h3>
+
+                  <p>
+                    Een persoonlijk succes tijdens Werkplekleren 2 was dat ik
+                    merkbaar zelfstandiger ben geworden in het ontwikkelen van
+                    software en het oplossen van technische problemen.
+                  </p>
+
+                  <p>
+                    Waar ik vroeger sneller vastliep, slaag ik er nu vaker in om
+                    zelf oplossingen te vinden en systemen beter te begrijpen.
+                  </p>
+
+                  <p>
+                    Ik ben trots op de vooruitgang die ik heb gemaakt in zowel
+                    back-end als front-end ontwikkeling.
+                  </p>
+
+                  <p>
+                    Vooral het combineren van verschillende technologieën binnen
+                    één werkende applicatie gaf mij veel voldoening.
+                  </p>
+
+                  <p>
+                    Daarnaast maakte het indruk op mij hoeveel verschil kleine
+                    verbeteringen in structuur, design en gebruikservaring
+                    kunnen maken binnen een applicatie.
+                  </p>
+
+                  <p>
+                    Werkplekleren 2 heeft mij niet alleen technisch sterker
+                    gemaakt, maar heeft mij ook meer vertrouwen gegeven in mijn
+                    eigen vaardigheden als toekomstige IT-professional.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Contact</p>
+          <h2>Neem contact op</h2>
+        </div>
+        <div class="contact-grid">
+          <a class="contact-item" href="tel:0683256823"
+            ><span>📞</span><strong>Telefoon</strong
+            ><small>06 83256823</small></a
+          >
+          <a class="contact-item" href="mailto:Sem.Baijens@STUDENT.PXL.BE"
+            ><span>✉️</span><strong>Email</strong
+            ><small>Sem.Baijens@STUDENT.PXL.BE</small></a
+          >
+          <a
+            class="contact-item"
+            href="https://www.linkedin.com/in/sem-baijens-a4326633b"
+            target="_blank"
+            ><span>🌐</span><strong>LinkedIn</strong
+            ><small>Sem Baijens</small></a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2025 Sem Baijens · 1PROe</p>
+    </footer>
+  </body>
+</html>
