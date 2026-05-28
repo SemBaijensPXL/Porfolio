@@ -90,7 +90,44 @@ a { color: inherit; }
 .section {
     width: min(1120px, calc(100% - 2rem));
     margin: 0 auto;
-    padding: 5rem 0;
+
+    padding: 2.5rem 0;
+}
+/* minder ruimte tussen sections */
+
+.section + .section {
+    padding-top: 1rem;
+}
+
+/* hero iets compacter */
+
+.wpl-hero {
+    min-height: 60vh;
+    padding: 3rem 0 2rem;
+}
+
+/* featured project dichter op hero */
+
+.featured-project {
+    margin-top: 0.5rem;
+}
+
+/* minder ruimte onder headings */
+
+.section-heading {
+    margin-bottom: 1rem;
+}
+
+/* reflectie compacter */
+
+.reflection-card {
+    padding: 2.2rem;
+}
+
+/* highlights compacter */
+
+.project-highlights {
+    gap: 1rem;
 }
 
 .hero {
@@ -378,4 +415,707 @@ th { color: #07111f; background: linear-gradient(135deg, var(--primary), var(--a
     .hero, .featured-project { grid-template-columns: 1fr; }
     .project-grid, .contact-grid { grid-template-columns: 1fr; }
     .section { padding: 3.5rem 0; }
+}
+
+/* PROFIELFOTO IN HERO */
+
+
+
+.hero-profile {
+    background: var(--card);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.profile-image {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid rgba(56, 189, 248, 0.35);
+    box-shadow: 0 18px 45px rgba(56, 189, 248, 0.18);
+    margin-bottom: 1rem;
+}
+
+.profile-info h3 {
+    margin: 0 0 0.3rem;
+    color: var(--white);
+    font-size: 1.4rem;
+}
+
+.profile-info p {
+    margin: 0;
+    color: var(--muted);
+    font-weight: 700;
+}
+
+/* zorg dat je codeblok mooi blijft */
+
+.code-window code {
+    font-family: Consolas, Monaco, monospace;
+    font-size: 0.95rem;
+}
+
+/* FOTO + CODE IN HERO CARD */
+
+.hero-side {
+    width: 100%;
+    max-width: 620px;
+}
+
+.code-profile {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.profile-image {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+
+    border: 4px solid rgba(56, 189, 248, 0.35);
+
+    box-shadow:
+        0 0 30px rgba(56, 189, 248, 0.2),
+        0 10px 35px rgba(0,0,0,0.35);
+
+    flex-shrink: 0;
+}
+
+.code-profile pre {
+    flex: 1;
+    min-width: 260px;
+}
+
+.code-window {
+    padding: 1.8rem;
+}
+
+.code-window code {
+    font-family: Consolas, Monaco, monospace;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* mobiel netjes onder elkaar */
+@media (max-width: 850px) {
+    .hero-side {
+        width: 100%;
+    }
+
+    .hero-profile {
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .profile-image {
+        width: 140px;
+        height: 140px;
+    }
+
+    .code-profile {
+        justify-content: center;
+        text-align: left;
+    }
+}
+
+/* PROJECT CAROUSEL */
+
+.project-carousel {
+    position: relative;
+    margin: 2rem 0;
+    max-width: 850px;
+    overflow: hidden;
+    border-radius: 24px;
+    background: #0f172a;
+    border: 1px solid rgba(255,255,255,0.12);
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.45s ease;
+}
+
+.carousel-track img {
+    min-width: 100%;
+    height: 320px;
+    object-fit: contain;
+    padding: 20px;
+    background: #0f172a;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.55);
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.carousel-btn.prev {
+    left: 14px;
+}
+
+.carousel-btn.next {
+    right: 14px;
+}
+
+@media (max-width: 850px) {
+    .carousel-track img {
+        height: 220px;
+        padding: 12px;
+    }
+}
+
+.main-nav a[href="wpl1.html"],
+.main-nav a[href="wpl2.html"] {
+    color: #07111f;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    box-shadow: 0 8px 22px rgba(56, 189, 248, 0.22);
+}
+
+.main-nav a[href="wpl1.html"]:hover,
+.main-nav a[href="wpl2.html"]:hover {
+    transform: translateY(-2px);
+    color: #07111f;
+}
+
+.wpl-hero {
+    min-height: 75vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 6rem 0;
+}
+
+.wpl-hero h1 {
+    font-size: clamp(4rem, 9vw, 7rem);
+    letter-spacing: -0.08em;
+
+    max-width: 1100px;
+
+    margin-bottom: 2rem;
+}
+
+.wpl-hero p {
+    max-width: 850px;
+
+    font-size: 1.35rem;
+    line-height: 1.8;
+
+    color: var(--muted);
+}/* REFLECTION SECTION */
+
+.reflection-card {
+    padding: 3rem;
+}
+
+.reflection-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+
+    margin-bottom: 3rem;
+}
+
+.reflection-badge {
+    padding: 0.7rem 1rem;
+
+    border-radius: 999px;
+
+    background: rgba(56, 189, 248, 0.12);
+
+    border: 1px solid rgba(56, 189, 248, 0.3);
+
+    color: white;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.reflection-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.reflection-block {
+    background: rgba(255,255,255,0.03);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 24px;
+
+    padding: 2rem;
+
+    transition: 0.3s ease;
+}
+
+.reflection-block:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(56, 189, 248, 0.25);
+}
+
+.reflection-block h3 {
+    margin-bottom: 1.2rem;
+}
+
+.reflection-block p {
+    color: var(--muted);
+
+    line-height: 1.8;
+}
+
+@media (max-width: 850px) {
+
+    .reflection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reflection-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .reflection-card {
+        padding: 2rem;
+    }
+}
+/* PROJECT HIGHLIGHTS */
+
+.project-highlights {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 1.5rem;
+}
+
+.highlight-card {
+    position: relative;
+
+    display: flex;
+    gap: 1.4rem;
+
+    padding: 2rem;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.05),
+            rgba(255,255,255,0.02)
+        );
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.25);
+
+    overflow: hidden;
+
+    transition: 0.3s ease;
+}
+
+.highlight-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(56,189,248,0.08),
+            transparent 40%
+        );
+
+    opacity: 0;
+
+    transition: 0.3s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(56,189,248,0.25);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.35);
+}
+
+.highlight-card:hover::before {
+    opacity: 1;
+}
+
+.highlight-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 20px;
+
+    font-size: 1.8rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(56,189,248,0.18),
+            rgba(34,197,94,0.10)
+        );
+
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.highlight-content h4 {
+    margin-bottom: 0.8rem;
+
+    font-size: 1.3rem;
+}
+
+.highlight-content p {
+    margin: 0;
+
+    color: var(--muted);
+
+    line-height: 1.7;
+}
+
+@media (max-width: 850px) {
+
+    .project-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .highlight-card {
+        padding: 1.5rem;
+    }
+
+    .highlight-icon {
+        width: 55px;
+        height: 55px;
+
+        font-size: 1.5rem;
+    }
+}
+/* ========================= */
+/* COOL WPL2 PROJECT DESIGN */
+/* ========================= */
+
+.modern-project {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    padding: clamp(1.4rem, 3vw, 3rem);
+    border-radius: 34px;
+    background:
+        radial-gradient(circle at 85% 15%, rgba(56,189,248,0.18), transparent 28%),
+        radial-gradient(circle at 15% 90%, rgba(34,197,94,0.12), transparent 30%),
+        linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.025));
+    border: 1px solid rgba(255,255,255,0.14);
+    box-shadow: 0 30px 90px rgba(0,0,0,0.45);
+}
+
+.modern-project::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    background:
+        linear-gradient(120deg, transparent, rgba(56,189,248,0.18), transparent);
+    opacity: 0.45;
+    pointer-events: none;
+}
+
+.project-top {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: start;
+}
+
+.project-title-content h2 {
+    font-size: clamp(2.4rem, 5vw, 4.8rem);
+    max-width: 650px;
+}
+
+.project-intro {
+    max-width: 620px;
+    font-size: 1.1rem;
+}
+
+.project-status {
+    box-shadow: 0 0 30px rgba(34,197,94,0.18);
+}
+
+/* Carousel groot en premium */
+.project-carousel {
+    position: relative;
+    z-index: 2;
+    margin: 2.5rem 0 2rem;
+    border-radius: 30px;
+    background:
+        linear-gradient(145deg, #020617, #0f172a);
+    border: 1px solid rgba(255,255,255,0.14);
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.04),
+        0 25px 70px rgba(0,0,0,0.45);
+}
+
+.carousel-track img {
+    height: clamp(260px, 44vw, 560px);
+    padding: clamp(1rem, 3vw, 2.5rem);
+    object-fit: contain;
+}
+
+.carousel-btn {
+    width: 54px;
+    height: 54px;
+    background: rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(255,255,255,0.18);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+}
+
+.carousel-btn:hover {
+    background: linear-gradient(135deg, rgba(56,189,248,0.35), rgba(34,197,94,0.25));
+}
+
+/* Tech stack mooi onder carousel */
+.tech-stack,
+.modern-stack {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin: 2rem 0;
+}
+
+.tech-stack span,
+.modern-stack span {
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+    font-size: 0.88rem;
+    font-weight: 800;
+    color: #eaf6ff;
+    background: rgba(255,255,255,0.075);
+    border: 1px solid rgba(255,255,255,0.14);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+/* Back-end en Front-end horizontaal en strak */
+.project-description-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 2rem;
+}
+
+.project-description-card {
+  position: relative;
+  padding: 2.5rem;
+  border-radius: 32px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at top left,
+      rgba(0, 180, 255, 0.12),
+      transparent 45%),
+    linear-gradient(145deg,
+      rgba(28, 41, 66, 0.96),
+      rgba(19, 29, 48, 0.96));
+
+  border: 1px solid rgba(0, 180, 255, 0.25);
+
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+  transition: 0.35s ease;
+}
+
+.project-description-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0, 180, 255, 0.45);
+}
+
+.card-icon {
+  width: 95px;
+  height: 95px;
+  border-radius: 28px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 2rem;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon img {
+  width: 78%;
+  height: 78%;
+
+  object-fit: contain;
+
+  border-radius: 18px;
+
+  transition: transform 0.3s ease;
+}
+
+.project-description-card:hover .card-icon img {
+  transform: scale(1.08);
+}
+
+.project-description-card h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.project-description-card p {
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.feature-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.feature-list span {
+  padding: 1rem 1.2rem;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  color: white;
+
+  font-size: 0.95rem;
+
+  transition: 0.3s ease;
+}
+
+.feature-list span:hover {
+  background: rgba(0, 180, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+.full-btn {
+  width: 100%;
+  justify-content: center;
+
+  padding: 1.2rem;
+
+  border-radius: 999px;
+
+  font-weight: 700;
+  font-size: 1rem;
+
+  margin-top: 1rem;
+}
+
+/* Highlights mooier */
+.project-highlights {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem;
+}
+
+.highlight-card {
+    border-radius: 30px;
+    background:
+        radial-gradient(circle at top right, rgba(56,189,248,0.10), transparent 40%),
+        linear-gradient(145deg, rgba(255,255,255,0.075), rgba(255,255,255,0.025));
+}
+
+/* Mobiel */
+@media (max-width: 900px) {
+    .project-top,
+    .project-description-grid,
+    .project-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .project-status {
+        width: fit-content;
+    }
+
+    .carousel-btn {
+        width: 44px;
+        height: 44px;
+    }
+
+    .feature-list {
+        grid-template-columns: 1fr;
+    }
+}
+.project-carousel {
+    margin: 2.5rem auto;
+    width: min(100%, 850px);
+}
+.free-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.free-card {
+  padding: 2rem;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.free-card h3 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.free-card p {
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.7;
 }

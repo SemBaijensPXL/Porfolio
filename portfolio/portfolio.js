@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
     initAccordions();
     initCarousel();
+    initProjectCarousels();
     initScrollReveal();
     initActiveNavigation();
 });
@@ -108,5 +109,33 @@ function initActiveNavigation() {
 
     sections.forEach(section => {
         observer.observe(section);
+    });
+}
+
+
+function initProjectCarousels() {
+    document.querySelectorAll(".project-carousel").forEach((carousel) => {
+        const track = carousel.querySelector(".carousel-track");
+        const slides = carousel.querySelectorAll(".carousel-track img");
+        const prevBtn = carousel.querySelector(".prev");
+        const nextBtn = carousel.querySelector(".next");
+
+        if (!track || slides.length === 0 || !prevBtn || !nextBtn) return;
+
+        let index = 0;
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        nextBtn.addEventListener("click", () => {
+            index = (index + 1) % slides.length;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener("click", () => {
+            index = (index - 1 + slides.length) % slides.length;
+            updateCarousel();
+        });
     });
 }
