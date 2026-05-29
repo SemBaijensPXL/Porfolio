@@ -1,68 +1,65 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const menuButton = document.getElementById("dropdown-toggle");
-    const navLinks = document.getElementById("navbar-links");
-    const links = document.querySelectorAll(".nav-links a");
+  const menuButton = document.getElementById("dropdown-toggle");
+  const navLinks = document.getElementById("navbar-links");
+  const links = document.querySelectorAll(".nav-links a");
+  const sections = document.querySelectorAll("section[id]");
 
-    if (!menuButton || !navLinks) return;
+  if (!menuButton || !navLinks) return;
 
-    const closeMenu = () => {
-        navLinks.classList.remove("show");
-        menuButton.setAttribute("aria-expanded", "false");
-        menuButton.textContent = "☰";
-    };
+  function setMenuState(isOpen) {
+    navLinks.classList.toggle("show", isOpen);
+    menuButton.classList.toggle("open", isOpen);
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+    menuButton.textContent = isOpen ? "×" : "☰";
+  }
 
-    const openMenu = () => {
-        navLinks.classList.add("show");
-        menuButton.setAttribute("aria-expanded", "true");
-        menuButton.textContent = "×";
-    };
+  function closeMenu() {
+    setMenuState(false);
+  }
 
-    menuButton.addEventListener("click", (event) => {
-        event.stopPropagation();
+  menuButton.addEventListener("click", (event) => {
+    event.stopPropagation();
 
-        const isOpen = navLinks.classList.contains("show");
-        isOpen ? closeMenu() : openMenu();
+    const isOpen = navLinks.classList.contains("show");
+    setMenuState(!isOpen);
+  });
+
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      closeMenu();
     });
+  });
 
-    links.forEach((link) => {
-        link.addEventListener("click", () => {
-            links.forEach((item) => item.classList.remove("active"));
-            link.classList.add("active");
-            closeMenu();
-        });
-    });
+  document.addEventListener("click", (event) => {
+    const clickedOutside =
+      !navLinks.contains(event.target) &&
+      !menuButton.contains(event.target);
 
-    document.addEventListener("click", (event) => {
-        if (!navLinks.contains(event.target) && !menuButton.contains(event.target)) {
-            closeMenu();
-        }
-    });
+    if (clickedOutside) closeMenu();
+  });
 
-    document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") {
-            closeMenu();
-        }
-    });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMenu();
+  });
 
-    const sections = document.querySelectorAll("section[id]");
-
-    window.addEventListener("scroll", () => {
-        let currentSection = "";
-
-        sections.forEach((section) => {
-            const sectionTop = section.offsetTop - 140;
-
-            if (window.scrollY >= sectionTop) {
-                currentSection = section.getAttribute("id");
-            }
-        });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
 
         links.forEach((link) => {
-            link.classList.remove("active");
-
-            if (link.getAttribute("href") === `#${currentSection}`) {
-                link.classList.add("active");
-            }
+          link.classList.toggle(
+            "active",
+            link.getAttribute("href") === `#${entry.target.id}`
+          );
         });
-    });
+      });
+    },
+    {
+      rootMargin: "-45% 0px -45% 0px",
+      threshold: 0
+    }
+  );
+
+  sections.forEach((section) => observer.observe(section));
 });
