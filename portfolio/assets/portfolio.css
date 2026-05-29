@@ -592,3 +592,34 @@ tr:hover td { background: rgba(255,255,255,0.04); }
 .wpl-hero-panel {
   margin-top: 2rem;
 }
+
+.reflection-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.reflection-text h3 {
+  margin: 1rem 0 0.4rem;
+  color: var(--blue);
+}
+
+.reflection-text p {
+  margin: 0 0 0.5rem;
+  line-height: 1.55;
+}
+
+.reflection-download {
+  white-space: nowrap;
+}
+
+@media (max-width: 850px) {
+  .reflection-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .reflection-download {
+    width: 100%;
+  }
+}
